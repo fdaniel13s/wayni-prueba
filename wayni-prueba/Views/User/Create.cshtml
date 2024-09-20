@@ -1,0 +1,23 @@
+@model wayni_prueba.Domain.Entities.User
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Create User</h2>
+<form asp-action="Create" method="post">
+    <div>
+        <label>First Name</label>
+        <input asp-for="FirstName" name="FirstName" />
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input asp-for="LastName" name="LastName" />
+    </div>
+    <div>
+        <label>DNI</label>
+        <input asp-for="DNI" name="DNI" />
+    </div>
+    <button type="submit">Create</button>
+</form>
+<a href="@Url.Action("Index")">Back to List</a>

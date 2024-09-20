@@ -1,0 +1,32 @@
+@model wayni_prueba.Domain.Entities.User
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>User Details</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Property</th>
+        <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>First Name</td>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <td>DNI</td>
+        <td>@Model.DNI</td>
+    </tr>
+    <!-- Add more properties as needed -->
+    </tbody>
+</table>
+<a href="@Url.Action("Edit", new { id = Model.Id })" class="btn-primary">Edit</a>
+<a href="@Url.Action("Index")" class="btn-primary">Back to List</a>

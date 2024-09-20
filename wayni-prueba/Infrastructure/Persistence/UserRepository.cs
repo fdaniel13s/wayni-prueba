@@ -7,7 +7,7 @@ namespace wayni_prueba.Infrastructure.Persistence;
 public class UserRepository : IUserRepository
 {
     private readonly ApplicationDbContext _context;
-
+    
     public UserRepository(ApplicationDbContext context)
     {
         _context = context;
@@ -43,6 +43,11 @@ public class UserRepository : IUserRepository
             _context.Users.Remove(user);
             _context.SaveChanges();
         }
+    }
+    
+    public void SaveChanges()
+    {
+        _context.SaveChanges();
     }
 }
 
