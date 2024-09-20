@@ -1,0 +1,23 @@
+@model IEnumerable<wayni_prueba.Domain.Entities.User>
+
+<h1>Lista de Usuarios</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+    <tr>
+        <td>@user.Id</td>
+        <td>@user.FirstName</td>
+        <td>@user.DNI</td>
+    </tr>
+    }
+    </tbody>
+</table>
